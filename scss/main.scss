@@ -1,0 +1,103 @@
+@import '_variables';
+@import '_mixins';
+@import 'head';
+@import 'btn';
+@import 'body';
+
+
+@font-face {
+    font-family: 'Graphik LC TT';
+    src: url('../fonts/graphiklcweb_medium-webfont.woff2') format('woff2'),
+         url('../fonts/graphiklcweb_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.flex {
+    display: flex;    
+} 
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+    @include max($md) {
+        max-width: 1290px;
+        margin: 0 20px;
+    }
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;    
+}
+
+//общая ссылка
+.start-now {
+    font-family: 'Graphik LC TT';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;    
+    margin-top: 30px;  
+    a {
+        text-decoration: none;
+        color: #000000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }    
+}
+
+// общий размер и позиция блоков block-control block-shorten block-ensure block-less_work+текст
+.block-img {
+    max-width: 632px;
+    max-height: 632px;
+}
+.block_left {
+    flex: 0 0 50%;
+}
+.block_right {
+    flex: 0 0 50%;      
+}
+.size50 {
+    p {
+        font-family: 'Graphik LC TT';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 60px;
+        color: #000000;
+        @include max($md) {
+            font-size: 40px;
+        line-height: 50px;
+        } 
+    }
+}
+.size20 {
+    p {
+    font-family: 'Graphik LC TT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;    
+    color: #000000;
+    margin-top: 30px;
+    text-align: justify;        
+    }
+}
+
+
+//@media screen and (min width: 320px) {
+    
+
+
+
+
+
+
