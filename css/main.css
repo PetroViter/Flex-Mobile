@@ -5,10 +5,12 @@
 @media screen and (max-width: 768px) {
   .head {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    border-bottom: #636161 2px solid;
   }
   .head-nav {
     order: 3;
+    margin-bottom: 20px;
   }
   .head-enter {
     order: 2;
@@ -141,53 +143,49 @@
   background: #535353;
 }
 
-.flex-m {
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .main-img {
   color: #FFFFFF;
   margin-top: 151px;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.main-img-bg-img {
-  background-image: url("../image/img-main.jpg");
-  background-repeat: no-repeat;
-  max-height: 529px;
-  background-position: 100%;
 }
 @media screen and (max-width: 768px) {
-  .main-img-bg-img {
-    background-image: url("../image/img-main-mobil.jpg");
-    background-repeat: no-repeat;
-    max-height: 529px;
-    background-position: 100%;
+  .main-img {
+    margin-top: 50px;
   }
 }
-@media screen and (max-width: 576px) {
-  .main-img-bg-img {
-    background-image: none;
+.main-img-flex_m {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .main-img-flex_m {
+    flex-direction: column;
   }
 }
-.main-img-text_h1 p {
+.main-img-flex_m-img {
+  max-width: 759px;
+  max-height: 529px;
+  flex: 0 0 55%;
+}
+.main-img-flex_m-text {
+  flex-direction: column;
+  flex: 0 0 45%;
+}
+.main-img-flex_m-text-h1 p {
   font-family: "Graphik LC TT";
   font-style: normal;
   font-weight: 600;
   font-size: 65px;
   line-height: 70px;
   color: #000000;
-  max-width: 552px;
-  margin-top: -22px;
+  max-width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .main-img-text_h1 p {
-    max-width: 500px;
+  .main-img-flex_m-text-h1 p {
+    max-width: 90%;
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 370px) {
-  .main-img-text_h1 p {
+  .main-img-flex_m-text-h1 p {
     font-family: "Graphik LC TT";
     font-style: normal;
     font-weight: 500;
@@ -197,7 +195,7 @@
     max-width: 500px;
   }
 }
-.main-img-writing {
+.main-img-flex_m-text-writing {
   font-family: "Graphik LC TT";
   font-style: normal;
   font-weight: 400;
@@ -208,7 +206,13 @@
   margin-top: 51px;
   margin-bottom: 51px;
 }
-.main-img-btn-change p {
+@media screen and (max-width: 768px) {
+  .main-img-flex_m-text-writing {
+    text-align: justify;
+    max-width: 100%;
+  }
+}
+.main-img-flex_m-text-btn-change p {
   font-family: "Graphik LC TT";
   font-style: normal;
   font-weight: 400;
@@ -603,12 +607,8 @@
 .integrate-flex {
   flex-direction: column;
   align-items: center;
-  margin: 165px 133px 165px 133px;
-}
-@media screen and (max-width: 768px) {
-  .integrate-flex {
-    margin: 30px 15px 30px 15px;
-  }
+  margin-top: 119px;
+  margin-bottom: 161px;
 }
 .integrate-flex-h2 {
   font-family: "Graphik LC TT";
@@ -617,16 +617,14 @@
   font-size: 65px;
   line-height: 75px;
   color: #000000;
-  padding-left: 117px;
-  padding-right: 117px;
+  max-width: 65%;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .integrate-flex-h2 {
     font-size: 50px;
     font-weight: 500;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 100%;
   }
 }
 .integrate-flex-text {
@@ -637,8 +635,14 @@
   line-height: 30px;
   text-align: center;
   color: #000000;
-  max-width: 539px;
+  max-width: 45%;
   margin-top: 4px;
+}
+@media screen and (max-width: 768px) {
+  .integrate-flex-text {
+    max-width: 90%;
+    font-weight: 300;
+  }
 }
 .integrate-flex-img {
   margin-top: 25px;
@@ -661,11 +665,13 @@
   line-height: 75px;
   text-align: center;
   color: #000000;
-  padding: 110px 253px 0px 253px;
+  max-width: 60%;
+  margin-top: 110px;
 }
 @media screen and (max-width: 768px) {
   .easy-block-flex-h2 {
-    padding: 55px 15px 0px 15px;
+    max-width: 100%;
+    margin-top: 70px;
     font-size: 50px;
     font-weight: 500;
   }
@@ -864,13 +870,17 @@
 @media screen and (max-width: 768px) {
   .container {
     max-width: 1290px;
-    margin: 0 20px;
+    padding: 0 20px;
   }
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+main {
+  margin-top: 40px;
 }
 
 .start-now {
